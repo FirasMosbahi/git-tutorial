@@ -95,3 +95,19 @@ git add .
 git commit -m 'fourt feature'
 git push --set-upstream origin feature-4
 ```
+
+2. Merge branch feature-3
+
+3. Pull request branch feature-4
+
+4. Resolve conflicts
+
+```shell
+git checkout feature-4
+git pull origin dev
+
+git commit -m 'resolve conflicts'
+git push
+```
+
+5. Merge branch feature-4
