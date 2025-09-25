@@ -28,3 +28,89 @@ git branch -M main
 git remote add origin https://github.com/FirasMosbahi/git-tutorial.git
 git push -u origin main
 ```
+
+6. Setup branchs
+
+```shell
+git checkout -b staging
+git push --set-upstream origin staging
+
+git checkout -b dev
+git push --set-upstream origin dev
+```
+
+## Create first merge via UI
+
+1. Push to feature branch
+```shell
+git checkout dev
+git checkout -b feature-1
+echo 'text1' > text.txt
+git add .
+git commit -m 'first feature'
+git push --set-upstream origin feature-1
+```
+
+2. Create pull request
+
+3. Pull changes from dev branch
+```shell
+git checkout dev
+git pull
+```
+
+## Create merge via shell
+
+1. Push to feature branch
+```shell
+git checkout dev
+git checkout -b feature-2
+echo 'text2' > text.txt
+git add .
+git commit -m 'second feature'
+git push --set-upstream origin feature-2
+```
+
+```shell
+git pull origin dev
+git merge feature-2
+```
+
+## Resolve merge conflicts
+
+1. Create conflict:
+
+```shell
+git checkout dev
+git checkout -b feature-3
+echo 'text3' > text.txt
+git add .
+git commit -m 'third feature'
+git push --set-upstream origin feature-3
+
+git checkout dev
+git checkout -b feature-4
+echo 'text4' > text.txt
+git add .
+git commit -m 'fourt feature'
+git push --set-upstream origin feature-4
+```
+
+2. Merge branch feature-3
+
+3. Pull request branch feature-4
+
+4. Resolve conflicts
+
+```shell
+git checkout feature-4
+git pull origin dev
+
+git status
+
+git add .
+git commit -m 'resolve conflicts'
+git push
+```
+
+5. Merge branch feature-4
