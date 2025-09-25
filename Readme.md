@@ -41,11 +41,20 @@ git push --set-upstream origin dev
 
 ## Create first merge via UI
 
+1. Push to feature branch
 ```shell
 git checkout dev
 git checkout -b feature-1
 echo 'text1' > text.txt
 git add .
 git commit -m 'first feature'
-git push
+git push --set-upstream origin feature-1
+```
+
+2. Create pull request
+
+3. Pull changes from dev branch
+```shell
+git checkout dev
+git pull
 ```
