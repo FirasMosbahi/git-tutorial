@@ -120,3 +120,9 @@ git push
 1. Create pull request from dev to staging and merge it
 
 2. Create pull request from staging to main and merge it
+
+3. Add tag
+
+```shell
+git tag -a v1.0 -m "First release"
+```
