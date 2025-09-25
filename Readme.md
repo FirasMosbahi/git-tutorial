@@ -106,6 +106,9 @@ git push --set-upstream origin feature-4
 git checkout feature-4
 git pull origin dev
 
+git status
+
+git add .
 git commit -m 'resolve conflicts'
 git push
 ```
