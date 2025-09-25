@@ -71,6 +71,11 @@ git commit -m 'second feature'
 git push --set-upstream origin feature-2
 ```
 
+```shell
+git pull origin dev
+git merge feature-2
+```
+
 ## Resolve merge conflicts
 
 1. Create conflict:
