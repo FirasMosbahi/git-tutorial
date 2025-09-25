@@ -114,3 +114,9 @@ git push
 ```
 
 5. Merge branch feature-4
+
+## Release to main
+
+1. Create pull request from dev to staging and merge it
+
+2. Create pull request from staging to main and merge it
