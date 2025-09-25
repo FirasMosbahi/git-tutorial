@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-text1
-=======
-text2
->>>>>>> feature-2
+text4
