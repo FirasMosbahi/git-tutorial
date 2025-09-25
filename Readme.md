@@ -58,3 +58,35 @@ git push --set-upstream origin feature-1
 git checkout dev
 git pull
 ```
+
+## Create merge via shell
+
+1. Push to feature branch
+```shell
+git checkout dev
+git checkout -b feature-2
+echo 'text2' > text.txt
+git add .
+git commit -m 'second feature'
+git push --set-upstream origin feature-2
+```
+
+## Resolve merge conflicts
+
+1. Create conflict:
+
+```shell
+git checkout dev
+git checkout -b feature-3
+echo 'text3' > text.txt
+git add .
+git commit -m 'third feature'
+git push --set-upstream origin feature-3
+
+git checkout dev
+git checkout -b feature-4
+echo 'text4' > text.txt
+git add .
+git commit -m 'fourt feature'
+git push --set-upstream origin feature-4
+```
