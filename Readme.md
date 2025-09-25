@@ -28,3 +28,24 @@ git branch -M main
 git remote add origin https://github.com/FirasMosbahi/git-tutorial.git
 git push -u origin main
 ```
+
+6. Setup branchs
+
+```shell
+git checkout -b staging
+git push --set-upstream origin staging
+
+git checkout -b dev
+git push --set-upstream origin dev
+```
+
+## Create first merge via UI
+
+```shell
+git checkout dev
+git checkout -b feature-1
+echo 'text1' > text.txt
+git add .
+git commit -m 'first feature'
+git push
+```
