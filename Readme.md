@@ -127,3 +127,24 @@ git push
 git tag -a v1.0 -m "First release"
 git push origin v1.0
 ```
+
+## make hotfix
+
+1. Create hotfix
+```shell
+git checkout staging
+git pull
+git checkout -b H1-hotfix
+
+echo 'text 10' > text.txt
+
+git add .
+git commit -m 'hotfix: change text.txt content'
+git push --set-upstream origin H1-hotfix
+```
+
+2. Merge to staging
+
+3. Merge staging into dev
+
+4. Merge staging into main
